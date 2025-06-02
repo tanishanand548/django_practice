@@ -22,8 +22,8 @@ macOS/Linux:
     pip install django
 
 ### 3. Start a Django project
-    django-admin startproject tanXelv
-    cd tanXelv
+    django-admin startproject tanish(name of project will be different from virtual environment name)
+    cd tanish
 
 ### 4. Run the development server
     python manage.py runserver
