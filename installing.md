@@ -1,5 +1,3 @@
-# Django
-
 ## 🛠️ Installing of Django in VS Code
 
 ### 1. Create and activate a virtual environment
