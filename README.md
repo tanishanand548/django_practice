@@ -70,3 +70,45 @@ include the path in tanish/tanish/urls.py:
           path('admin/', admin.site.urls),
       ]
 this will route users that comes in via "127.0.0.1:8000"
+
+### Templates in Django
+Create a "templates" folder inside the "anand" folder, and create a HTML file named "djproject.html"<br>
+tanish/anand/templates/djproject.html:
+
+      <!DOCTYPE html>
+      <html>
+      <body>
+
+      <h1>Hello World!</h1>
+      <p>Welcome to my first Django project!</p>
+
+      </body>
+      </html>
+Open the views.py file in the members folder, and replace its content with this:
+
+      from django.http import HttpResponse
+      from django.template import loader
+
+      def anand(request):
+        template = loader.get_template('djproject.html')
+        return HttpResponse(template.render())
+Change Settings:- work with more complicated stuff than "Hello World!", We have to tell Django that a new app is created<br>
+"settings.py" file in the "tanish" folder<br>
+add the "anand" app like this:
+
+      INSTALLED_APPS = [
+          'django.contrib.admin',
+          'django.contrib.auth',
+          'django.contrib.contenttypes',
+          'django.contrib.sessions',
+          'django.contrib.messages',
+          'django.contrib.staticfiles',
+          'anand'
+      ]
+run this command:
+
+      python manage.py migrate
+after
+      
+      python manage.py runserver
+      "http://127.0.0.1:8000/anand/" run this in the address bar
