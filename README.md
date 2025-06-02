@@ -37,6 +37,18 @@ You’ll see:
         ├── urls.py
         └── wsgi.py
 
+## Create App in Django
+      python manage.py startapp anand
 
+### Open "views.py" in "anand" folder
+      from django.shortcuts import render
+      # Create your views here.
+Find it and open it, and replace the content with this:
+
+      from django.shortcuts import render
+      from django.http import HttpResponse
+
+      def members(request):
+          return HttpResponse("Hello world!")
 
   
